@@ -1,7 +1,6 @@
 <template>
   <div class="page">
-    <navbar></navbar>
-    <slide></slide>
+    <Counter></Counter>
   </div>
 </template>
 

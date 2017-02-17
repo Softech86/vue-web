@@ -1,0 +1,94 @@
+@import "../../components/config";
+
+.banner {
+  $gbtShadow: #D9DADC;
+  width: 100%;
+  display: inline-flex;
+  border: 0 solid $gbtShadow;
+  border-bottom-width: 2px;
+
+  img {
+    height: 150px;
+    @include respond-to(xs) {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  @include respond-to(sm) {
+    width: 52%;
+    margin: 25px auto;
+  }
+
+  div {
+    font-family: $gbtFont;
+    display: inline-block;
+    color: $gbtBlack;
+  }
+  .desc {
+    float: right;
+    width: 100%;
+    font-size: 14px;
+    line-height: 24px;
+
+    p {
+      margin: 18px 0;
+    }
+
+    @include respond-to(xs) {
+      width: 60%;
+      min-width: 300px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  .cooperation {
+
+    .title {
+      position: relative;
+      font-size: 20px;
+      margin-top: 18px;
+    }
+    ul {
+      position: relative;
+      margin: 27px 0;
+      padding: 0;
+      li {
+        font-size: 14px;
+        margin: 25px 0;
+      }
+    }
+  }
+
+  .divide {
+    width: 100%;
+  }
+
+  .corp {
+    display: block;
+    margin-bottom: 0;
+    @include respond-to(sm) {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 0;
+      .corp-img:nth-child(1) {
+        width: 6.1%;
+        margin-left: 8.4%;
+      }
+      .corp-img:nth-child(2) {
+        width: 22.3%;
+        margin-left: 23.5%;
+      }
+      .corp-img:nth-child(3) {
+        width: 26.5%;
+        margin-left: 11.5%;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../config";
+
+.header {
+  height: 50px;
+  padding: 0 10px;
+  @include respond-to(xs) {
+    padding: 0 7%;
+  }
+
+  position: relative;
+
+  .logo {
+    opacity: 0.71;
+
+    img {
+      margin-top: 6px;
+      height: 36px;
+    }
+  }
+
+  .btn-box {
+    position: relative;
+    float: right;
+    top: 15px;
+    display: inline-flex;
+
+    .btn {
+      margin-top: 4px;
+      color: $gbtBlack;
+      margin-left: 25px;
+      display: none;
+      &:nth-last-child(1), &:nth-last-child(2) {
+        display: block;
+      }
+    }
+    @include respond-to(xs) {
+      .btn {
+        display: block;
+      }
+    }
+    @include respond-to(sm) {
+      top: 10px;
+      .btn {
+        margin-left: 40px;
+      }
+    }
+    .border {
+      width: 60px;
+      height: 28px;
+      line-height: 28px;
+      margin-top: 0px;
+      border: 1px solid $gbtBlack;
+      text-align: center;
+
+      &:hover {
+        padding-top: 0;
+        color: white !important;
+        background-color: $gbtBlack;
+      }
+    }
+  }
+}

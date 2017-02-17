@@ -1,0 +1,186 @@
+@import "../../components/config";
+
+
+.jumbotron {
+  background: #FDFDFD;
+  border: solid $gbtGray;
+  border-width: 2px 0;
+  width: 100%;
+  padding: 40px 0 30px 0;
+  margin: 0 0 8px 0;
+  display: inline-block;
+  text-align: center;
+
+  .desc {
+    font-family: $gbtFont;
+    text-align: center;
+    display: block;
+    @include respond-to(sm) {
+      transform: translateY(-115px);
+      display: inline-block;
+    }
+
+    .title {
+      font-size: 25px;
+    }
+    .btn {
+      display: block;
+      text-align: center;
+      margin: 30px auto;
+      width: 150px;
+      height: 40px;
+      background-color: $gbtBlack;
+      font-size: 15px;
+      line-height: 40px;
+      color: white;
+      border: 1px solid $gbtBlack;
+
+      &:hover {
+        padding-top: 0;
+        color: white !important;
+        background-color: $gbtGray;
+        border: 1px solid white;
+      }
+    }
+  }
+
+  img {
+    height: 340px;
+    margin: auto;
+    display: none;
+
+    &:first-child {
+      display: block;
+      margin-bottom: 30px;
+    }
+    @include respond-to(sm) {
+      margin-left: 8%;
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.what-is-gambition {
+  /* Gambition 是什么？: */
+  font-family: $gbtFont;
+  text-align: center;
+
+  .title {
+    margin-top: 40px;
+    width: 100%;
+    font-size: 25px;
+  }
+  .content {
+    margin-top: 40px;
+    display: inline-block;
+
+    img {
+      height: 264px;
+    }
+    .desc {
+      display: block;
+      font-size: 20px;
+      margin: 50px 0 0 0;
+      position: relative;
+      bottom: 20px;
+
+      .row {
+        display: block;
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+
+      @include respond-to(xs) {
+        display: inline-block;
+        .row {
+          margin-bottom: 70px;
+        }
+
+        margin-left: 15px;
+        font-size: 25px;
+      }
+      @include respond-to(sm) {
+        margin-left: 108px;
+      }
+    }
+  }
+}
+
+.user-comment {
+  text-align: center;
+  .comment {
+    $space: 10px;
+    font-size: 25px;
+    margin: 80px 0 40px 0;
+
+    @include respond-to(sm) {
+      margin: 120px 0;
+    }
+
+    &:before {
+      content: "\“";
+      display: inline-block;
+      padding-right: $space;
+    }
+    &:after {
+      content: " \”";
+      padding-left: $space;
+      display: inline-block;
+    }
+  }
+  .user {
+    width: 100%;
+
+    .head-img {
+      $d: 100px;
+      cursor: pointer;
+      background-color: lighten($gbtGray, 30%);
+      width: $d;
+      height: $d;
+      top: 0;
+      border: 1px solid $gbtGray;
+      border-radius: 50%;
+      overflow: hidden;
+      text-align: center;
+      line-height: $d;
+      opacity: 0.3;
+      transition: opacity .3s;
+      display: none;
+      @include respond-to(xs) {
+        width: $d * 2;
+        height: $d * 2;
+        line-height: $d * 2;
+      }
+      @include respond-to(sm) {
+        display: inline-block;
+        margin-right: 20%;
+        width: $d;
+        height: $d;
+        line-height: $d;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .head-img:last-child {
+      margin-right: 0;
+    }
+
+    .select {
+      display: inline-block;
+      opacity: 1;
+    }
+  }
+}
+
